@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-starter": {
+    "AccessApiWebApp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -77,10 +77,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-starter:build:production"
+              "buildTarget": "AccessApiWebApp:build:production"
             },
             "development": {
-              "buildTarget": "angular-starter:build:development"
+              "buildTarget": "AccessApiWebApp:build:development"
             }
           },
           "defaultConfiguration": "development"
