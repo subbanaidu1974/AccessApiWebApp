@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
+import { environment } from '../../../../environments/environment';
+import { SeoService } from '../../../core/services/seo/seo.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
-import { environment } from '../../../../environments/environment';
-import { SeoService } from '../../../core/services/seo/seo.service';
-
 @Component({
-  selector: 'app-home',
-  imports: [CommonModule ],
-  templateUrl: './home.html',
-  styleUrl: './home.css'
+  selector: 'app-apis',
+   imports: [CommonModule, RouterLink],
+  templateUrl: './apis.html',
+  styleUrl: './apis.css'
 })
-export class Home {
+export class Apis {
   name = environment.application.name;
   angular = environment.application.angular;
   bootstrap = environment.application.bootstrap;
@@ -55,6 +54,7 @@ export class Home {
       link: '/httpclient'
     },
   ]
+
 
   constructor(private seoService: SeoService) {
 

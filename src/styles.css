@@ -1,4 +1,30 @@
-body {
-  padding-top: 3.5rem;
+body, app-root {
+  background-color: lightskyblue;
+  /* background-image: url('/assets/params/accessapi/cloudy-sky.png'); */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* padding-top: 1.5rem; */
   font-family: "Roboto", sans-serif;
 }
+
+.main-content {
+  padding-bottom: 20px; /* Adjust to match your footer height */
+}
+
+.nga-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+  background: #fff; /* Or your preferred background */
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.08);
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 75vh;
+}
+

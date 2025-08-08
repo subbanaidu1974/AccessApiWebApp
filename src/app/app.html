@@ -1,24 +1,8 @@
-<style>
-  app-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  app-footer {
-    position: fixed;        
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-  main {
-    margin-top: 0px;   /* Adjust based on header height */
-    margin-bottom: 0px; /* Adjust based on footer height */
-  }
-</style>
+
 <app-header></app-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+<div class="layout-container ">
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
 <app-footer></app-footer>
