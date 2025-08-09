@@ -15,11 +15,7 @@ export class TaxAgenciesApi {
   
 
   ngOnInit(): void {
-    this.postApiCall();
+
   }
 
-
-  
-
- 
 }
