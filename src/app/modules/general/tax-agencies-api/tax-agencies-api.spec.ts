@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Mailing } from './mailing';
+import { TaxAgenciesApi } from './tax-agencies-api';
 
-describe('Mailing', () => {
-  let component: Mailing;
-  let fixture: ComponentFixture<Mailing>;
+describe('TaxAgenciesApi', () => {
+  let component: TaxAgenciesApi;
+  let fixture: ComponentFixture<TaxAgenciesApi>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Mailing]
+      imports: [TaxAgenciesApi]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Mailing);
+    fixture = TestBed.createComponent(TaxAgenciesApi);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

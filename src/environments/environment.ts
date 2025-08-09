@@ -9,5 +9,5 @@ export const environment = {
   urlNews: './assets/params/json/mock/trailers.json',
   urlMovies: './assets/params/json/mock/movies.json',
   useMock: true,
-  backend: 'http://localhost:3000',
+  backend: 'http://localhost:8000',
 };

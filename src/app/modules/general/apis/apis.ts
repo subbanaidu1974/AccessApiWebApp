@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { SeoService } from '../../../core/services/seo/seo.service';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-apis',
-   imports: [CommonModule, RouterLink],
+   imports: [CommonModule],
   templateUrl: './apis.html',
   styleUrl: './apis.css'
 })
@@ -45,7 +45,7 @@ export class Apis {
       icon: "fa-solid fa-screwdriver-wrench",
       name: "Tax Agencies API",
       description: "Tax agencies info",
-      link: '/components'
+      link: '/tax-agencies-api'
     },
     {
       icon: "fa-solid fa-network-wired",
@@ -55,8 +55,7 @@ export class Apis {
     },
   ]
 
-
-  constructor(private seoService: SeoService) {
+  constructor(private router: Router) {
 
     const content =
       'This application was developed with ' + this.angular + ' and ' + this.bootstrap +
@@ -64,8 +63,13 @@ export class Apis {
 
     const title = 'angular-starter Title : Home Page';
 
-    this.seoService.setMetaDescription(content);
-    this.seoService.setMetaTitle(title);
+    // this.seoService.setMetaDescription(content);
+    // this.seoService.setMetaTitle(title);
 
   }
+
+  onNavigate(item: any) {
+    this.router.navigate([item.link]);
+  }
+
 }

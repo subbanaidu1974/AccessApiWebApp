@@ -6,6 +6,8 @@ import { Inject, PLATFORM_ID } from '@angular/core';
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,9 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     CommonModule,
     RouterOutlet,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    MatButtonModule,
+    MatIconModule 
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

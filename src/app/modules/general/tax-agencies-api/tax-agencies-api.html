@@ -1,0 +1,15 @@
+<div class="container" style="padding-top: 6rem;">
+    <h1>Tax Agencies API</h1>
+
+    <button mat-fab color="primary" (click)="postApiCall()">
+    <mat-icon>add</mat-icon>
+    </button>
+    <p>
+        The Tax Agencies API offers a programmatic way to interact with the General's Tax Agencies feature. You can use it to create, update, read and delete tax agencies.
+        The API is built using GraphQL and is available at <a href="https://tax-agencies-api.ngrok.io/graphql" target="_blank">https://tax-agencies-api.ngrok.io/graphql</a>. The API is secured with a JWT token.
+        You can use the API Explorer to play with the API, it includes a token that is valid for 1 hour.
+    </p>
+    <div *ngIf="apidata">
+        {{apidata}}
+    </div>
+</div>
