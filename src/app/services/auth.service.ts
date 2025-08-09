@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://api.accessapis.com/api/get-api-key';
+  private apiUrl = 'https://api.accessapis.com';
   // private baseUrl = 'http://localhost:8000/get-api-key';
 
   constructor(private http: HttpClient) {}
@@ -21,7 +21,7 @@ export class AuthService {
       .set('password', password);
 
     // POST with empty body, query params
-    return this.http.post<any>(this.apiUrl, {}, { headers, params });
+    return this.http.post<any>(this.apiUrl + '/get-api-key', {}, { headers, params });
   }
 
   createKey(payload: {
@@ -36,6 +36,6 @@ export class AuthService {
       'Content-Type': 'application/json'
     });
 
-    return this.http.post<any>(this.apiUrl, payload, { headers });
+    return this.http.post<any>(this.apiUrl + '/create-api-key', payload, { headers });
   }
 }
