@@ -14,7 +14,8 @@ export class AuthService {
   getApiKey(email: string, password: string): Observable<any> {
     const headers = new HttpHeaders({
       'accept': 'application/json',
-      'Content-Type': 'application/x-www-form-urlencoded'
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'origin': 'https://accessapis.com'
     });
 
     const params = new HttpParams()
