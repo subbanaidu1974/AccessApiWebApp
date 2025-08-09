@@ -13,7 +13,8 @@ export class AuthService {
 
   getApiKey(email: string, password: string): Observable<any> {
     const headers = new HttpHeaders({
-      'accept': 'application/json'
+      'accept': 'application/json',
+      'Content-Type': 'application/x-www-form-urlencoded'
     });
 
     const params = new HttpParams()
