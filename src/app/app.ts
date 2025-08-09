@@ -8,11 +8,13 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   imports: [
     CommonModule,
+    HttpClientModule,
     RouterOutlet,
     HeaderComponent,
     FooterComponent,

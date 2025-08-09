@@ -1,15 +1,57 @@
 <div class="container" style="padding-top: 6rem;">
     <h1>Tax Agencies API</h1>
+    
+    <div class="row">
+        <div class="col-12 col-md-2">
+            <button color="my-green-btn" matButton="filled" (click)="createApiKey()">CreateKey</button>
+            <!-- <a matButton="filled" href="https://www.google.com/" target="_blank">Link</a> -->
+        </div>
 
-    <button mat-fab color="primary">
-    <mat-icon>add</mat-icon>
-    </button>
-    <p>
-        The Tax Agencies API offers a programmatic way to interact with the General's Tax Agencies feature. You can use it to create, update, read and delete tax agencies.
-        The API is built using GraphQL and is available at <a href="https://tax-agencies-api.ngrok.io/graphql" target="_blank">https://tax-agencies-api.ngrok.io/graphql</a>. The API is secured with a JWT token.
-        You can use the API Explorer to play with the API, it includes a token that is valid for 1 hour.
-    </p>
-    <div *ngIf="apidata">
-        {{apidata}}
+        <div class="col-12 col-md-2">
+            <button color="my-green-btn" matButton="filled" (click)="getApiKey()">GetKey</button>
+            <!-- <a matButton="filled" href="https://www.google.com/" target="_blank">Link</a> -->
+        </div>
+
+        <div class="col-12 col-md-2">
+            <button color="my-green-btn" matButton="filled" (click)="getUsageStats()">GetStats</button>
+            <!-- <a matButton="filled" href="https://www.google.com/" target="_blank">Link</a> -->
+        </div>
+        <div class="col-12 col-md-2">
+            <button color="my-green-btn" matButton="filled" (click)="getStateNames()">StateNames</button>
+            <!-- <a matButton="filled" href="https://www.google.com/" target="_blank">Link</a> -->
+        </div>
+
+        <div class="col-12 col-md-2">
+            <button color="my-green-btn" matButton="filled" (click)="getCountiesByState('Florida')">CountiesByState</button>
+            <!-- <a matButton="filled" href="https://www.google.com/" target="_blank">Link</a> -->
+        </div>
+
+        <div class="col-12 col-md-2">
+            <button color="my-green-btn" matButton="filled" (click)="getCitiesByState('Florida')">CitiesByState</button>
+            <!-- <a matButton="filled" href="https://www.google.com/" target="_blank">Link</a> -->
+        </div>
     </div>
+
+    @if (apiKey) {
+        <p>Your API Key: {{ apiKey | json }}</p>
+    }
+    @if (stats) {
+        <div>
+          <pre>{{ stats | json }}</pre>
+        </div>
+    } 
+    @if (!apiKey) {
+        <pre>{{ createKey | json }}</pre>
+    }
+
+    @if (stateNames) {
+        <pre>{{ stateNames | json }}</pre>
+    }
+
+    @if (countiesByState) {
+        <pre>{{ countiesByState | json }}</pre>
+    }
+    @if (citiesByState) {
+        <pre>{{ citiesByState | json }}</pre>
+    }
 </div>

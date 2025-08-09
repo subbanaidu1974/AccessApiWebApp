@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 import { environment } from '../../../../environments/environment';
-import { SeoService } from '../../../core/services/seo/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -56,16 +55,12 @@ export class Home {
     },
   ]
 
-  constructor(private seoService: SeoService) {
+  constructor() {
 
     const content =
       'This application was developed with ' + this.angular + ' and ' + this.bootstrap +
       ' It applies Routing, Lazy loading and Progressive Web App (PWA)';
 
     const title = 'angular-starter Title : Home Page';
-
-    this.seoService.setMetaDescription(content);
-    this.seoService.setMetaTitle(title);
-
   }
 }

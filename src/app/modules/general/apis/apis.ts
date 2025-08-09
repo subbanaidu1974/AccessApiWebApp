@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../../environments/environment';
-import { SeoService } from '../../../core/services/seo/seo.service';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 
@@ -62,9 +61,6 @@ export class Apis {
       ' It applies Routing, Lazy loading and Progressive Web App (PWA)';
 
     const title = 'angular-starter Title : Home Page';
-
-    // this.seoService.setMetaDescription(content);
-    // this.seoService.setMetaTitle(title);
 
   }
 

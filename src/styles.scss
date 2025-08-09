@@ -9,3 +9,20 @@ body .swagger-ui .scheme-container {
   .swagger-ui .scheme-container .scheme-container__content {
       background: #f5f5f5 !important;
   }
+
+@use '@angular/material' as mat;
+
+$my-primary: mat.define-palette(mat.$indigo-palette);
+$my-accent: mat.define-palette(mat.$pink-palette);
+$my-warn: mat.define-palette(mat.$red-palette);
+$my-success: mat.define-palette(mat.$green-palette);
+
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+    warn: $my-warn,
+  )
+));
+
+@include mat.all-component-themes($my-theme);
